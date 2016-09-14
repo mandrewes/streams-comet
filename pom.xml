@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.rsqn.streams</groupId>
+    <artifactId>streams-comet</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <spring.version>4.3.2.RELEASE</spring.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <!-- Build  and test -->
+        <testng.version>6.9.10</testng.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <commons.io.version>LATEST</commons.io.version>
+        <commons.lang.version>LATEST</commons.lang.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <commons.io.version>LATEST</commons.io.version>
+        <commons.lang.version>LATEST</commons.lang.version>
+        <cometd.version>3.0.0.RC1</cometd.version>
+        <jetty.version>9.4.0.M1</jetty.version>
+        <jetty-plugin-version>${jetty.version}</jetty-plugin-version>
+        <slf4j-version>1.7.7</slf4j-version>
+        <spring.version>4.3.2.RELEASE</spring.version>
+        <jackson1-version>1.9.13</jackson1-version>
+        <jackson2-version>2.3.3</jackson2-version>
+        <rhino-version>1.7R4</rhino-version>
+    </properties>
+
+    <modules>
+        <module>tmp-common</module>
+        <module>streams-server-model</module>
+        <module>streams-server-api</module>
+        <module>streams-server-comet</module>
+        <module>streams-client-api</module>
+    </modules>
+
+    <dependencies>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
