@@ -9,16 +9,18 @@ import org.springframework.beans.factory.annotation.Required;
 
 import javax.servlet.ServletException;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmbeddedJetty {
     private static final Logger log = LoggerFactory.getLogger(EmbeddedJetty.class);
-    private String appBaseDir;
+    private List<String> appBaseSearchPaths;
     private int port;
     private String contextPath;
 
     @Required
-    public void setAppBaseDir(String appBaseDir) {
-        this.appBaseDir = appBaseDir;
+    public void setAppBaseSearchPaths(List<String> appBaseSearchPaths) {
+        this.appBaseSearchPaths = appBaseSearchPaths;
     }
 
     @Required
@@ -34,16 +36,20 @@ public class EmbeddedJetty {
     public void start() throws ServletException {
         try {
             log.info("Starting EmbeddedJetty on port {}", port);
-            log.info("Current Working Directory is ", new File("").getAbsolutePath());
+            log.info("Current Working Directory is ", new File(".").getAbsolutePath() + " search paths will be relative to this directory");
             Server server = new Server(port);
             WebAppContext context = new WebAppContext();
             File webXml = null;
 
-            String[] webXmlPaths = {appBaseDir + "/WEB-INF/web.xml"};
+
+            List<String> webXmlPaths = new ArrayList();
+            appBaseSearchPaths.forEach(s -> webXmlPaths.add(s + "/WEB-INF/web.xml"));
 
             for (String webXmlPath : webXmlPaths) {
-                log.info("Looking for webXml at ({})", webXmlPath);
                 webXml = new File(webXmlPath);
+
+                log.info("Looking for webXml at ({} : {})", webXmlPath, webXml.getAbsolutePath());
+
                 if (webXml.exists()) {
                     log.info("Found webXML at ({})", webXml.getAbsolutePath());
                     break;
@@ -58,19 +64,8 @@ public class EmbeddedJetty {
                 return;
             }
 
-            File webDirectory = null;
-            String[] webDirectoryPaths = {appBaseDir};
-            for (String webDirPath : webDirectoryPaths) {
-                log.info("Looking for webDir at ({})", webDirPath);
-                webDirectory = new File(webDirPath);
-                if (webXml.exists()) {
-                    log.info("Found webDir at ({})", webDirectory.getAbsolutePath());
-                    break;
-                } else {
-                    log.info("No webDir at ({})", webDirPath);
-                    webDirectory = null;
-                }
-            }
+            File webDirectory = webXml.getParentFile().getParentFile();
+            log.info("Webdir is at ({})", webDirectory);
 
             if (webDirectory == null) {
                 log.error("No webDir Found - exiting");

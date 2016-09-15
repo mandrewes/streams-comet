@@ -20,7 +20,7 @@
         <commons.io.version>LATEST</commons.io.version>
         <commons.lang.version>LATEST</commons.lang.version>
         <cometd.version>3.0.0.RC1</cometd.version>
-        <jetty.version>9.4.0.M1</jetty.version>
+        <jetty.version>9.3.0.M1</jetty.version>
         <jetty-plugin-version>${jetty.version}</jetty-plugin-version>
         <slf4j-version>1.7.7</slf4j-version>
         <spring.version>4.3.2.RELEASE</spring.version>
