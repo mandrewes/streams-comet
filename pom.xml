@@ -35,6 +35,8 @@
         <module>streams-server-api</module>
         <module>streams-server-comet</module>
         <module>streams-client-api</module>
+        <module>sportsbet-streams-server-utils</module>
+        <module>sportsbet-streams-server-standalone</module>
     </modules>
 
     <dependencies>
