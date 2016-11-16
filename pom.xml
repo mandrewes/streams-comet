@@ -36,7 +36,7 @@
     <scm>
         <connection>scm:git:git@github.com:rsqn/streams-comet.git</connection>
         <developerConnection>scm:git:git@github.com:rsqn/streams-comet.git</developerConnection>
-        <url>https://github.com/mandrewes/useful-things</url>
+        <url>https://github.com/mandrewes/streams-comet</url>
     </scm>
 
     <properties>
