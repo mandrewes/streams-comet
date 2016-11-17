@@ -3,14 +3,14 @@
 
     <groupId>tech.rsqn.streams</groupId>
     <artifactId>tmp-common</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
 
     <parent>
         <groupId>tech.rsqn.streams</groupId>
         <artifactId>streams-comet</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4-SNAPSHOT</version>
     </parent>
 
     <dependencies>
