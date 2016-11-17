@@ -61,12 +61,9 @@
     </properties>
 
     <modules>
-        <!--abcd-->
         <module>tmp-common</module>
         <module>streams-server-model</module>
-        <module>streams-server-api</module>
         <module>streams-server-comet</module>
-        <module>streams-client-api</module>
     </modules>
 
 

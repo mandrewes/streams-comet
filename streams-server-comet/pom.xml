@@ -31,8 +31,13 @@
             <version>1.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>tech.rsqn</groupId>
+            <artifactId>useful-things</artifactId>
+            <version>1.0.8</version>
+        </dependency>
+        <dependency>
             <groupId>tech.rsqn.streams</groupId>
-            <artifactId>streams-server-api</artifactId>
+            <artifactId>streams-server-model</artifactId>
             <version>1.0.3-SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -2,8 +2,6 @@ package tech.rsqn.streams.server.comet.services.security;
 
 import tech.rsqn.streams.server.comet.authentication.UserSession;
 import tech.rsqn.streams.server.comet.services.AbstractService;
-import tech.rsqn.streams.server.model.messages.ErrorMessage;
-import tech.rsqn.streams.server.model.messages.TokenRequest;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.cometd.annotation.Listener;
 import org.cometd.annotation.Service;
@@ -13,6 +11,8 @@ import org.cometd.bayeux.server.ServerMessage;
 import org.cometd.bayeux.server.ServerSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tech.rsqn.streams.server.model.messages.ErrorMessage;
+import tech.rsqn.streams.server.model.messages.TokenRequest;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
