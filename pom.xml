@@ -9,7 +9,7 @@
 
     <groupId>tech.rsqn.streams</groupId>
     <artifactId>streams-comet</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>streams-comet</name>
