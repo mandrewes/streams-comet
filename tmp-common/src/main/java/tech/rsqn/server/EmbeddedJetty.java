@@ -33,11 +33,12 @@ public class EmbeddedJetty {
         this.contextPath = contextPath;
     }
 
-    public void start() throws ServletException {
+    public void start() throws Exception {
+        Server server = null;
         try {
             log.info("Starting EmbeddedJetty on port {}", port);
             log.info("Current Working Directory is ", new File(".").getAbsolutePath() + " search paths will be relative to this directory");
-            Server server = new Server(port);
+            server = new Server(port);
             WebAppContext context = new WebAppContext();
             File webXml = null;
 
@@ -76,12 +77,15 @@ public class EmbeddedJetty {
             context.setResourceBase(webDirectory.getPath());
             context.setContextPath(contextPath);
             context.setParentLoaderPriority(true);
-
+            context.setThrowUnavailableOnStartupException(true);
             server.setHandler(context);
             WebSocketServerContainerInitializer.configureContext(context);
             server.start();
             server.join();
         } catch (Exception e) {
+            if (server != null) {
+                server.stop();
+            }
             log.error(e.getMessage(), e);
         }
     }
