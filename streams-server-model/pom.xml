@@ -3,7 +3,7 @@
 
     <groupId>tech.rsqn.streams</groupId>
     <artifactId>streams-server-model</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
 
@@ -16,7 +16,7 @@
     <parent>
         <groupId>tech.rsqn.streams</groupId>
         <artifactId>streams-comet</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5-SNAPSHOT</version>
     </parent>
 
 
