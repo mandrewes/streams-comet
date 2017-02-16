@@ -47,13 +47,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <commons.io.version>LATEST</commons.io.version>
         <commons.lang.version>LATEST</commons.lang.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <commons.io.version>LATEST</commons.io.version>
-        <commons.lang.version>LATEST</commons.lang.version>
         <cometd.version>3.0.10</cometd.version>
         <jetty.version>9.3.0.M1</jetty.version>
-        <slf4j-version>1.7.7</slf4j-version>
-        <spring.version>4.3.2.RELEASE</spring.version>
         <jackson1-version>1.9.13</jackson1-version>
         <jackson2-version>2.3.3</jackson2-version>
         <rhino-version>1.7R4</rhino-version>
