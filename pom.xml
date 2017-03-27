@@ -55,7 +55,6 @@
     </properties>
 
     <modules>
-        <module>tmp-common</module>
         <module>streams-server-model</module>
         <module>streams-server-comet</module>
     </modules>
